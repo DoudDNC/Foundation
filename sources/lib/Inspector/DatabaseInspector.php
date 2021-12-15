@@ -26,7 +26,7 @@ use PommProject\Foundation\Client\Client;
  *
  * @see Client
  */
-class DatabaseInspector extends Client
+class DatabaseInspector extends Client implements InspectorInterface
 {
 
     use InspectorTrait;

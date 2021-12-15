@@ -26,7 +26,7 @@ use PommProject\Foundation\Where;
  *
  * @see Client
  */
-class RelationInspector extends Client
+class RelationInspector extends Client implements InspectorInterface
 {
     use InspectorTrait;
 

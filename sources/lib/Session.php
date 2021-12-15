@@ -9,6 +9,8 @@
  */
 namespace PommProject\Foundation;
 
+use PommProject\Foundation\Client\ClientInterface;
+use PommProject\Foundation\Inspector\InspectorInterface;
 use PommProject\Foundation\Session\Session as VanillaSession;
 
 /**
@@ -81,10 +83,10 @@ class Session extends VanillaSession
      *
      * Return the database inspector.
      *
-     * @param   string $name (null)
-     * @return  \PommProject\Foundation\Inspector\Inspector
+     * @param null $name (null)
+     * @return \PommProject\Foundation\Client\ClientInterface|\PommProject\Foundation\Inspector\InspectorInterface
      */
-    public function getInspector($name = null)
+    public function getInspector($name = null): ClientInterface | InspectorInterface
     {
         return $this->getClientUsingPooler('inspector', $name);
     }

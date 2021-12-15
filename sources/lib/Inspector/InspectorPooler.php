@@ -43,7 +43,7 @@ class InspectorPooler extends ClientPooler
      *
      * @see    ClientPooler
      * @param  null|string $identifier
-     * @return Inspector
+     * @return \PommProject\Foundation\Inspector\InspectorInterface
      */
     public function getClient($identifier = null)
     {
@@ -58,7 +58,7 @@ class InspectorPooler extends ClientPooler
      * createClient
      *
      * @see    ClientPooler
-     * @return Inspector
+     * @return \PommProject\Foundation\Inspector\InspectorInterface
      * @throws FoundationException
      */
     protected function createClient($identifier)
